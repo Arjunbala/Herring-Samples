@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/mpi_hello_world.dir/mpi-hello-world.c.o -o mpi_hello_world  -Wl,-rpath,/opt/amazon/openmpi/lib /opt/amazon/openmpi/lib/libmpi.so 
