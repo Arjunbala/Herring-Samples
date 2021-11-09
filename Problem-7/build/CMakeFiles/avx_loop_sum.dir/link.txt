@@ -1,0 +1,1 @@
+/usr/bin/c++  -march=broadwell CMakeFiles/avx_loop_sum.dir/avx-loop-sum.cpp.o -o avx_loop_sum 

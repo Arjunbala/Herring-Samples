@@ -1,0 +1,1 @@
+/usr/bin/c++  -march=broadwell CMakeFiles/avx_sum.dir/avx-sum.cpp.o -o avx_sum 

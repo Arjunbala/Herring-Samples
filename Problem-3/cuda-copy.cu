@@ -11,10 +11,12 @@ int main (int argc, char **argv) {
     int unique_char = 0x12;
 
     // Allocate GPU memory
-    cudaMalloc(&gpu_buffer, size * sizeof(char));
+    int err = cudaMalloc(&gpu_buffer, size * sizeof(char));
+    printf("%d\n", err);
 
     // Set some value for buffer inside GPU memory
-    cudaMemset(gpu_buffer, unique_char, size);
+    err = cudaMemset(gpu_buffer, unique_char, size);
+    printf("%d\n", err);
 
     // Now allocate CPU memory
     cpu_buffer = (char *) malloc(size * sizeof(char));
@@ -29,9 +31,10 @@ int main (int argc, char **argv) {
 	struct timeval begin,end;
 	gettimeofday(&begin, NULL);
         // transfer data
-	cudaMemcpy(cpu_buffer, gpu_buffer, size * sizeof(char), cudaMemcpyDeviceToHost);
+	err = cudaMemcpy(cpu_buffer, gpu_buffer, size * sizeof(char), cudaMemcpyDeviceToHost);
         gettimeofday(&end, NULL);
-        // measuring timing
+        printf("%d\n", err);
+	// measuring timing
 	total_time_usecs += (end.tv_sec- begin.tv_sec)*1000000 + (end.tv_usec- begin.tv_usec);
 	// validate data transfered
 	for (int i = 0; i < size; i++) {
