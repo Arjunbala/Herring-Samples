@@ -2,16 +2,22 @@
 #include<stdio.h>
 #include<unistd.h>
 
+pthread_mutex_t mutex;
+
 void* hello_func(void *p) {
+    pthread_mutex_lock(&mutex);
     printf("Hello\n");
     sleep(1);   
     printf("Hello\n");
+    pthread_mutex_unlock(&mutex);
     pthread_exit(0);
 }
 
 void* world_func(void *p) {
+    pthread_mutex_lock(&mutex);
     printf("World\n");
     printf("World\n");
+    pthread_mutex_unlock(&mutex);
     pthread_exit(0);
 }
 
