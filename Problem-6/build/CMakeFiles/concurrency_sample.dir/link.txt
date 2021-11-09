@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/concurrency_sample.dir/concurrency-sample.c.o -o concurrency_sample  -lpthread 
