@@ -1,0 +1,1 @@
+/usr/bin/g++ CMakeFiles/cuda_copy.dir/cuda-copy.cu.o -o cuda_copy  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/usr/local/cuda/lib64/stubs" -L"/usr/local/cuda/lib64"
