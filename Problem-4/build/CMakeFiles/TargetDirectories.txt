@@ -1,0 +1,3 @@
+/home/ubuntu/Herring-Samples/Problem-4/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/Herring-Samples/Problem-4/build/CMakeFiles/mpi_gpu_allreduce.dir
+/home/ubuntu/Herring-Samples/Problem-4/build/CMakeFiles/edit_cache.dir
