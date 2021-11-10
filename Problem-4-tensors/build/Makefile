@@ -129,29 +129,29 @@ mpi_gpu_allreduce/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_gpu_allreduce.dir/build.make CMakeFiles/mpi_gpu_allreduce.dir/build
 .PHONY : mpi_gpu_allreduce/fast
 
-mpi-gpu-allreduce.o: mpi-gpu-allreduce.cpp.o
+mpi-gpu-allreduce.o: mpi-gpu-allreduce.cu.o
 .PHONY : mpi-gpu-allreduce.o
 
 # target to build an object file
-mpi-gpu-allreduce.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_gpu_allreduce.dir/build.make CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.o
-.PHONY : mpi-gpu-allreduce.cpp.o
+mpi-gpu-allreduce.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_gpu_allreduce.dir/build.make CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.o
+.PHONY : mpi-gpu-allreduce.cu.o
 
-mpi-gpu-allreduce.i: mpi-gpu-allreduce.cpp.i
+mpi-gpu-allreduce.i: mpi-gpu-allreduce.cu.i
 .PHONY : mpi-gpu-allreduce.i
 
 # target to preprocess a source file
-mpi-gpu-allreduce.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_gpu_allreduce.dir/build.make CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.i
-.PHONY : mpi-gpu-allreduce.cpp.i
+mpi-gpu-allreduce.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_gpu_allreduce.dir/build.make CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.i
+.PHONY : mpi-gpu-allreduce.cu.i
 
-mpi-gpu-allreduce.s: mpi-gpu-allreduce.cpp.s
+mpi-gpu-allreduce.s: mpi-gpu-allreduce.cu.s
 .PHONY : mpi-gpu-allreduce.s
 
 # target to generate assembly for a file
-mpi-gpu-allreduce.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_gpu_allreduce.dir/build.make CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.s
-.PHONY : mpi-gpu-allreduce.cpp.s
+mpi-gpu-allreduce.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_gpu_allreduce.dir/build.make CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.s
+.PHONY : mpi-gpu-allreduce.cu.s
 
 # Help Target
 help:

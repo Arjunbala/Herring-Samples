@@ -1,22 +1,22 @@
-Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_eb076/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_eb076.dir/build.make CMakeFiles/cmTC_eb076.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a4d2c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a4d2c.dir/build.make CMakeFiles/cmTC_a4d2c.dir/build
 gmake[1]: Entering directory `/home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_eb076.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_eb076.dir/src.c.o -c /home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_eb076
-/usr/local/lib64/python3.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb076.dir/link.txt --verbose=1
-/usr/bin/cc -rdynamic CMakeFiles/cmTC_eb076.dir/src.c.o -o cmTC_eb076 
-CMakeFiles/cmTC_eb076.dir/src.c.o: In function `main':
-src.c:(.text+0x2d): undefined reference to `pthread_create'
-src.c:(.text+0x39): undefined reference to `pthread_detach'
-src.c:(.text+0x45): undefined reference to `pthread_cancel'
-src.c:(.text+0x56): undefined reference to `pthread_join'
+Building CXX object CMakeFiles/cmTC_a4d2c.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_a4d2c.dir/src.cxx.o -c /home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_a4d2c
+/usr/local/lib64/python3.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4d2c.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_a4d2c.dir/src.cxx.o -o cmTC_a4d2c 
+CMakeFiles/cmTC_a4d2c.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x2d): undefined reference to `pthread_create'
+src.cxx:(.text+0x39): undefined reference to `pthread_detach'
+src.cxx:(.text+0x45): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x56): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [cmTC_eb076] Error 1
+gmake[1]: *** [cmTC_a4d2c] Error 1
 gmake[1]: Leaving directory `/home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles/CMakeTmp'
-gmake: *** [cmTC_eb076/fast] Error 2
+gmake: *** [cmTC_a4d2c/fast] Error 2
 
 
 Source file was:
@@ -43,18 +43,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_53e35/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_53e35.dir/build.make CMakeFiles/cmTC_53e35.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7b30d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7b30d.dir/build.make CMakeFiles/cmTC_7b30d.dir/build
 gmake[1]: Entering directory `/home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_53e35.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_53e35.dir/CheckFunctionExists.c.o -c /usr/local/lib64/python3.7/site-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
-Linking C executable cmTC_53e35
-/usr/local/lib64/python3.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53e35.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_53e35.dir/CheckFunctionExists.c.o -o cmTC_53e35  -lpthreads 
+Building CXX object CMakeFiles/cmTC_7b30d.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_7b30d.dir/CheckFunctionExists.cxx.o -c /home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_7b30d
+/usr/local/lib64/python3.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b30d.dir/link.txt --verbose=1
+/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_7b30d.dir/CheckFunctionExists.cxx.o -o cmTC_7b30d  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [cmTC_53e35] Error 1
+gmake[1]: *** [cmTC_7b30d] Error 1
 gmake[1]: Leaving directory `/home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles/CMakeTmp'
-gmake: *** [cmTC_53e35/fast] Error 2
+gmake: *** [cmTC_7b30d/fast] Error 2
 
 
 

@@ -69,28 +69,28 @@ include CMakeFiles/mpi_gpu_allreduce.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/mpi_gpu_allreduce.dir/flags.make
 
-CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.o: CMakeFiles/mpi_gpu_allreduce.dir/flags.make
-CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.o: ../mpi-gpu-allreduce.cpp
-CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.o: CMakeFiles/mpi_gpu_allreduce.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.o -MF CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.o.d -o CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.o -c /home/ec2-user/Herring-Samples/Problem-4-tensors/mpi-gpu-allreduce.cpp
+CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.o: CMakeFiles/mpi_gpu_allreduce.dir/flags.make
+CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.o: ../mpi-gpu-allreduce.cu
+CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.o: CMakeFiles/mpi_gpu_allreduce.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CUDA object CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.o"
+	/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.o -MF CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.o.d -x cu -c /home/ec2-user/Herring-Samples/Problem-4-tensors/mpi-gpu-allreduce.cu -o CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.o
 
-CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ec2-user/Herring-Samples/Problem-4-tensors/mpi-gpu-allreduce.cpp > CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.i
+CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
 
-CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ec2-user/Herring-Samples/Problem-4-tensors/mpi-gpu-allreduce.cpp -o CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.s
+CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
 # Object files for target mpi_gpu_allreduce
 mpi_gpu_allreduce_OBJECTS = \
-"CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.o"
+"CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.o"
 
 # External object files for target mpi_gpu_allreduce
 mpi_gpu_allreduce_EXTERNAL_OBJECTS =
 
-mpi_gpu_allreduce: CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cpp.o
+mpi_gpu_allreduce: CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.o
 mpi_gpu_allreduce: CMakeFiles/mpi_gpu_allreduce.dir/build.make
 mpi_gpu_allreduce: /home/ec2-user/anaconda3/envs/pytorch_latest_p37/lib/python3.7/site-packages/torch/lib/libtorch.so
 mpi_gpu_allreduce: /home/ec2-user/anaconda3/envs/pytorch_latest_p37/lib/python3.7/site-packages/torch/lib/libc10.so
@@ -99,6 +99,7 @@ mpi_gpu_allreduce: /usr/local/cuda/lib64/libnvrtc.so
 mpi_gpu_allreduce: /usr/local/cuda/lib64/libnvToolsExt.so
 mpi_gpu_allreduce: /usr/local/cuda/lib64/libcudart.so
 mpi_gpu_allreduce: /home/ec2-user/anaconda3/envs/pytorch_latest_p37/lib/python3.7/site-packages/torch/lib/libc10_cuda.so
+mpi_gpu_allreduce: /opt/amazon/openmpi/lib64/libmpi.so
 mpi_gpu_allreduce: /home/ec2-user/anaconda3/envs/pytorch_latest_p37/lib/python3.7/site-packages/torch/lib/libc10_cuda.so
 mpi_gpu_allreduce: /home/ec2-user/anaconda3/envs/pytorch_latest_p37/lib/python3.7/site-packages/torch/lib/libc10.so
 mpi_gpu_allreduce: /usr/local/cuda/lib64/libcufft.so
@@ -108,7 +109,7 @@ mpi_gpu_allreduce: /usr/local/cuda/lib64/libcudnn.so
 mpi_gpu_allreduce: /usr/local/cuda/lib64/libnvToolsExt.so
 mpi_gpu_allreduce: /usr/local/cuda/lib64/libcudart.so
 mpi_gpu_allreduce: CMakeFiles/mpi_gpu_allreduce.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mpi_gpu_allreduce"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CUDA executable mpi_gpu_allreduce"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mpi_gpu_allreduce.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
