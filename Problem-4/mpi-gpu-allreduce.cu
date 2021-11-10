@@ -35,6 +35,11 @@ int main() {
     reduce_result = (float *) malloc(size * sizeof(float));
     MPI_Allreduce(cpu_tensor, reduce_result, size, MPI_FLOAT, MPI_SUM, MPI_COMM_WORLD);
 
+    for(int i=0;i<size;i++) {
+        cout<<reduce_result[i]<<" ";
+    }
+    cout<<endl;
+
     int ret = cudaMemcpy(gpu_tensor, reduce_result, size * sizeof(float), cudaMemcpyHostToDevice);
     cudaFree(gpu_tensor);
     free(cpu_tensor);

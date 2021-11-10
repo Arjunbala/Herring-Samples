@@ -393,20 +393,8 @@ MPI_CXX_SKIP_MPICXX:BOOL=FALSE
 //Location of the mpi library for MPI
 MPI_mpi_LIBRARY:FILEPATH=/opt/amazon/openmpi/lib/libmpi.so
 
-//Folder contains NVIDIA NCCL headers
-NCCL_INCLUDE_DIR:PATH=
-
-//Path to a file.
-NCCL_INCLUDE_DIRS:PATH=/usr/local/cuda/include
-
-//Path to a library.
-NCCL_LIBRARIES:FILEPATH=/usr/local/cuda/lib/libnccl.so
-
-//Folder contains NVIDIA NCCL libraries
-NCCL_LIB_DIR:PATH=
-
-//Version of NCCL to build with
-NCCL_VERSION:STRING=
+//No help, variable specified on the command line.
+NCCL_LIBRARY:UNINITIALIZED=/usr/local/cuda/lib/libnccl.so
 
 //Value Computed by CMake
 mpi_gpu_allreduce_BINARY_DIR:STATIC=/home/ubuntu/Herring-Samples/Problem-5/build
@@ -672,8 +660,6 @@ FIND_PACKAGE_MESSAGE_DETAILS_CUDA:INTERNAL=[/usr/local/cuda][/usr/local/cuda/bin
 FIND_PACKAGE_MESSAGE_DETAILS_MPI:INTERNAL=[TRUE][c ][v3.1()]
 //Details about finding MPI_CXX
 FIND_PACKAGE_MESSAGE_DETAILS_MPI_CXX:INTERNAL=[/opt/amazon/openmpi/lib/libmpi.so][mpi][/opt/amazon/openmpi/include][TRUE][v3.1()]
-//Details about finding NCCL
-FIND_PACKAGE_MESSAGE_DETAILS_NCCL:INTERNAL=[/usr/local/cuda/include][/usr/local/cuda/lib/libnccl.so][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: MPIEXEC_EXECUTABLE
@@ -710,10 +696,4 @@ MPI_RESULT_CXX_test_mpi_MPICXX:INTERNAL=TRUE
 MPI_RESULT_CXX_test_mpi_normal:INTERNAL=TRUE
 //ADVANCED property for variable: MPI_mpi_LIBRARY
 MPI_mpi_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: NCCL_INCLUDE_DIRS
-NCCL_INCLUDE_DIRS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: NCCL_LIBRARIES
-NCCL_LIBRARIES-ADVANCED:INTERNAL=1
-//Have symbol NCCL_VERSION_CODE
-NCCL_VERSION_DEFINED:INTERNAL=1
 

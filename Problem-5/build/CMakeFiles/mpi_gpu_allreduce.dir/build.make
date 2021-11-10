@@ -93,6 +93,7 @@ mpi_gpu_allreduce_EXTERNAL_OBJECTS =
 
 mpi_gpu_allreduce: CMakeFiles/mpi_gpu_allreduce.dir/mpi-gpu-allreduce.cu.o
 mpi_gpu_allreduce: CMakeFiles/mpi_gpu_allreduce.dir/build.make
+mpi_gpu_allreduce: /usr/local/cuda/lib/libnccl.so
 mpi_gpu_allreduce: /opt/amazon/openmpi/lib/libmpi.so
 mpi_gpu_allreduce: CMakeFiles/mpi_gpu_allreduce.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/Herring-Samples/Problem-5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CUDA executable mpi_gpu_allreduce"
