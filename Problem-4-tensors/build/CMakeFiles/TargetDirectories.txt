@@ -1,0 +1,3 @@
+/home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles/rebuild_cache.dir
+/home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles/edit_cache.dir
+/home/ec2-user/Herring-Samples/Problem-4-tensors/build/CMakeFiles/mpi_gpu_allreduce.dir
