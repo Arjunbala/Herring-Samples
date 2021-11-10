@@ -4,7 +4,7 @@
 # compile CUDA with /usr/local/cuda/bin/nvcc
 CUDA_DEFINES = 
 
-CUDA_INCLUDES = -isystem=/home/ubuntu/Herring-Samples/Problem-5/CUDA_INCLUDE_DIRS -isystem=/opt/amazon/openmpi/include
+CUDA_INCLUDES = -isystem=/home/ec2-user/Herring-Samples/Problem-5/CUDA_INCLUDE_DIRS -isystem=/opt/amazon/openmpi/include
 
 CUDA_FLAGS = -std=c++14
 

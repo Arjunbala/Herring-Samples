@@ -1,25 +1,22 @@
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/ubuntu/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ec2-user/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_2a7ae/fast && /usr/bin/make  -f CMakeFiles/cmTC_2a7ae.dir/build.make CMakeFiles/cmTC_2a7ae.dir/build
-make[1]: Entering directory '/home/ubuntu/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2a7ae.dir/src.cxx.o
-/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_2a7ae.dir/src.cxx.o -c /home/ubuntu/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_2a7ae
-/usr/local/lib/python3.6/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a7ae.dir/link.txt --verbose=1
-/usr/bin/c++ CMakeFiles/cmTC_2a7ae.dir/src.cxx.o -o cmTC_2a7ae 
-CMakeFiles/cmTC_2a7ae.dir/src.cxx.o: In function `main':
-src.cxx:(.text+0x3e): undefined reference to `pthread_create'
-src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
-src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
-src.cxx:(.text+0x67): undefined reference to `pthread_join'
-src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_daa0e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_daa0e.dir/build.make CMakeFiles/cmTC_daa0e.dir/build
+gmake[1]: Entering directory `/home/ec2-user/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_daa0e.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_daa0e.dir/src.cxx.o -c /home/ec2-user/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_daa0e
+/usr/local/lib64/python3.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_daa0e.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_daa0e.dir/src.cxx.o -o cmTC_daa0e 
+CMakeFiles/cmTC_daa0e.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x2d): undefined reference to `pthread_create'
+src.cxx:(.text+0x39): undefined reference to `pthread_detach'
+src.cxx:(.text+0x45): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x56): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_2a7ae.dir/build.make:98: recipe for target 'cmTC_2a7ae' failed
-make[1]: *** [cmTC_2a7ae] Error 1
-make[1]: Leaving directory '/home/ubuntu/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp'
-Makefile:127: recipe for target 'cmTC_2a7ae/fast' failed
-make: *** [cmTC_2a7ae/fast] Error 2
+gmake[1]: *** [cmTC_daa0e] Error 1
+gmake[1]: Leaving directory `/home/ec2-user/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_daa0e/fast] Error 2
 
 
 Source file was:
@@ -44,22 +41,20 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/ubuntu/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ec2-user/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_c40a4/fast && /usr/bin/make  -f CMakeFiles/cmTC_c40a4.dir/build.make CMakeFiles/cmTC_c40a4.dir/build
-make[1]: Entering directory '/home/ubuntu/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c40a4.dir/CheckFunctionExists.cxx.o
-/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_c40a4.dir/CheckFunctionExists.cxx.o -c /home/ubuntu/Herring-Samples/Problem-5/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
-Linking CXX executable cmTC_c40a4
-/usr/local/lib/python3.6/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c40a4.dir/link.txt --verbose=1
-/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_c40a4.dir/CheckFunctionExists.cxx.o -o cmTC_c40a4  -lpthreads 
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_aa3fd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_aa3fd.dir/build.make CMakeFiles/cmTC_aa3fd.dir/build
+gmake[1]: Entering directory `/home/ec2-user/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_aa3fd.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_aa3fd.dir/CheckFunctionExists.cxx.o -c /home/ec2-user/Herring-Samples/Problem-5/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_aa3fd
+/usr/local/lib64/python3.7/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa3fd.dir/link.txt --verbose=1
+/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_aa3fd.dir/CheckFunctionExists.cxx.o -o cmTC_aa3fd  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_c40a4.dir/build.make:98: recipe for target 'cmTC_c40a4' failed
-make[1]: *** [cmTC_c40a4] Error 1
-make[1]: Leaving directory '/home/ubuntu/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp'
-Makefile:127: recipe for target 'cmTC_c40a4/fast' failed
-make: *** [cmTC_c40a4/fast] Error 2
+gmake[1]: *** [cmTC_aa3fd] Error 1
+gmake[1]: Leaving directory `/home/ec2-user/Herring-Samples/Problem-5/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_aa3fd/fast] Error 2
 
 
 
