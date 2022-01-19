@@ -48,9 +48,14 @@ for line in lines:
         comm_to_rank_mapping[comm] = rank
 
 per_rank_stats = {}
+do_profiling = False
 
 for line in lines:
-    if "sendbuff" in line:
+    if "Starting CUDA profiling" in line:
+        do_profiling = True
+    if "Stopping CUDA profiling" in line:
+        do_profiling = False
+    if "sendbuff" in line and do_profiling == True:
         comm = line.split(" ")[20]
         collective = line.split(" ")[4].split(":")[0]
         tensor_size = int(line.split(" ")[12])
