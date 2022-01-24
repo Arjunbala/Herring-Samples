@@ -84,9 +84,8 @@ for line in lines:
         collective = line.split(" ")[4].split(":")[0]
         tensor_size = int(line.split(" ")[12])
         data_type = int(line.split(" ")[14])
-        root = int(line.split(" ")[18])
         initiating_rank = int(line.split("[")[1].split("]")[0].split(",")[1])
-        coll_tuple = (comm_and_rank_to_commhash_mapping[(comm,initiating_rank)],collective,tensor_size,data_type,root)
+        coll_tuple = (comm_and_rank_to_commhash_mapping[(comm,initiating_rank)],collective,tensor_size,data_type)
         if initiating_rank not in per_rank_stats:
             per_rank_stats[initiating_rank] = {}
         if coll_tuple not in per_rank_stats[initiating_rank]:
@@ -99,7 +98,7 @@ for rank in per_rank_stats:
     inverted_stats= sorted(rank_stats.items(), key=lambda item: item[1], reverse=True)
     for stat in inverted_stats:
         details,count = stat
-        commhash,collective,tensor_size,data_type,root = details
+        commhash,collective,tensor_size,data_type = details
         ranks = commhash_to_ranks_mapping[commhash]
         nodes_involved = ranks_to_nodes(ranks)
         across_machines= ""
@@ -115,7 +114,6 @@ for rank in per_rank_stats:
             + " SEND_SIZE: " + str(find_send_size(collective,tensor_size,data_type)) + " bytes"\
             + " RECV_SIZE: " + str(find_recv_size(collective,tensor_size,data_type, len(ranks))) + " bytes"\
             + " RANKS_INVOLVED: " + str(len(ranks)) + " " + str(ranks)\
-            + " NODES_INVOLVED: " + str(len(nodes_involved)) + " " + str(nodes_involved)\
-            + " ROOT: " + str(root))
+            + " NODES_INVOLVED: " + str(len(nodes_involved)) + " " + str(nodes_involved))
     print("== ==")
     print("\n")
