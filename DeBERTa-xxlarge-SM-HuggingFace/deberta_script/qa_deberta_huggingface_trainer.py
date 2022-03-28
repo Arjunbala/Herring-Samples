@@ -1,3 +1,9 @@
+import os
+#os.environ["LOCAL_RANK"] = os.environ["OMPI_COMM_WORLD_LOCAL_RANK"]
+#os.environ["WORLD_SIZE"] = os.environ["OMPI_COMM_WORLD_SIZE"]
+#os.environ["RANK"] = os.environ["OMPI_COMM_WORLD_RANK"]
+#os.environ["MASTER_ADDR"]="algo-1"
+#os.environ["MASTER_PORT"]="12345"
 from transformers import (
     DebertaV2Config,
     DebertaV2ForQuestionAnswering,
@@ -82,7 +88,7 @@ if __name__ == "__main__":
         gradient_accumulation_steps=args.acc,
         #adafactor = True,
         #optim="adafactor",
-        #gradient_checkpointing=True,
+        gradient_checkpointing=True,
     )
 
     # create Trainer instance
